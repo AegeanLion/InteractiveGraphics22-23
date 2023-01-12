@@ -38,9 +38,10 @@ body {
 
 @keyframes colorFlow {
       0%   {background: #0892D0;}
-      25%  {background: blue;}
-      50%  {background: turquoise;}
-      75%  {background: cyan;}
-      100% {background: aquamarine;}
+      25%  {background: aqua;}
+      50%  {background: 0892D0;}
+      75%  {background: aqua;}
+      100% {background: 0892D0;}
+      125%  {background: aqua;}
 }
 
