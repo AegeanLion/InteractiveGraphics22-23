@@ -11,9 +11,9 @@
 }
 
 .container div {
-  width: var(--s);
+  width: var(--s) * 1.1;
   margin: var(--m);
-  height: calc(var(--s)*1.1547); 
+  height: calc(var(--s)*1.1547)*1.1; 
   display: inline-block;
   font-size:initial;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
