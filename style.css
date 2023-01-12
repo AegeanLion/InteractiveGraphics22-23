@@ -37,7 +37,7 @@ body {
 }
 
 @keyframes colorFlow {
-      0%   {background: lime;}
+      0%   {background: #0892D0;}
       25%  {background: blue;}
       50%  {background: turquoise;}
       75%  {background: cyan;}
