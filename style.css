@@ -8,8 +8,6 @@
 
 .container {
   font-size: 0; /*disable white space between inline block element */
-  width: 110%;
-  height: 110%;
 }
 
 .container div {
