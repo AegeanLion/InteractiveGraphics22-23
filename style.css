@@ -30,6 +30,11 @@
   shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000  0 var(--f));
 }
 
+.headerMain {
+  position: fixed;
+  text-align: center;
+}
+
 body {
    animation: colorFlow 10s;
    animation-iteration-count: infinite;
