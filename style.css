@@ -30,9 +30,10 @@
   shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000  0 var(--f));
 }
 
-.headerMain {
-  position: fixed;
+.holderDiv {
+  position: relative;
   text-align: center;
+  z-index: 10;
 }
 
 body {
