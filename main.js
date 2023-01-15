@@ -4,7 +4,7 @@ const objs = [];
 
 let sketch = function(p) {
   p.setup = function() {
-    createCanvas(500, 500);
+    p.createCanvas(500, 500);
 
 // initializing all pieces of barrel
  barrelBase1 = new barrelBase(0, 0, 0, 60/2, 50/2, 60/2);
@@ -41,19 +41,19 @@ let sketch = function(p) {
   translate(250, 250);
 
 //fills in the ocean with triangle shading
-  fill(ocean.fillColor);
-  triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[2][0], ocean.nodes[2][1]);
-  triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[4][0], ocean.nodes[4][1]);
-  triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[4][0], ocean.nodes[4][1]);
-  triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[2][0], ocean.nodes[2][1]);
-  triangle(ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[2][0], ocean.nodes[2][1]);
-  triangle(ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[6][0], ocean.nodes[6][1]);
-  triangle(ocean.nodes[6][0], ocean.nodes[6][1], ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[5][0], ocean.nodes[5][1]);
-  triangle(ocean.nodes[4][0], ocean.nodes[4][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[6][0], ocean.nodes[6][1]);
-  triangle(ocean.nodes[5][0], ocean.nodes[5][1], ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[6][0], ocean.nodes[6][1]);
-  triangle(ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[6][0], ocean.nodes[6][1]);
-  triangle(ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[4][0], ocean.nodes[4][1], ocean.nodes[6][0], ocean.nodes[6][1]);
-  noFill();
+  p.fill(ocean.fillColor);
+  p.triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[2][0], ocean.nodes[2][1]);
+  p.triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[4][0], ocean.nodes[4][1]);
+  p.triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[4][0], ocean.nodes[4][1]);
+  p.triangle(ocean.nodes[0][0], ocean.nodes[0][1], ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[2][0], ocean.nodes[2][1]);
+  p.triangle(ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[2][0], ocean.nodes[2][1]);
+  p.triangle(ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[6][0], ocean.nodes[6][1]);
+  p.triangle(ocean.nodes[6][0], ocean.nodes[6][1], ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[5][0], ocean.nodes[5][1]);
+  p.triangle(ocean.nodes[4][0], ocean.nodes[4][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[6][0], ocean.nodes[6][1]);
+  p.triangle(ocean.nodes[5][0], ocean.nodes[5][1], ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[6][0], ocean.nodes[6][1]);
+  p.triangle(ocean.nodes[7][0], ocean.nodes[7][1], ocean.nodes[1][0], ocean.nodes[1][1], ocean.nodes[6][0], ocean.nodes[6][1]);
+  p.triangle(ocean.nodes[3][0], ocean.nodes[3][1], ocean.nodes[4][0], ocean.nodes[4][1], ocean.nodes[6][0], ocean.nodes[6][1]);
+  p.noFill();
 
 
 // drawing all pieces of barrel + any other objects (automatically does it without object methods)
@@ -61,16 +61,14 @@ let sketch = function(p) {
     drawObj(objs[i]);
   }
 
-}
-
-
-//for rotating the objects
-function mouseDragged() {
+    //for rotating the objects
+ p.mouseDragged = function() {
   for(let i = 0; i< objs.length; i++) {
     rotateX3D(objs[i], pmouseY - mouseY);
     rotateY3D(objs[i], pmouseX - mouseX);
   }
   }
+}
 }
 
 new p5(sketch, "box1"); 
