@@ -34,7 +34,7 @@
 .overlay {
   position: fixed;
   z-index: 10;
-  height: 50%;
+  height: 60%;
   width: 75%;
   top: 0;
   left: 0;
@@ -43,7 +43,7 @@
   padding: 14px 25px;
   text-decoration: none;
   display: inline-block;
-  border-radius: 1000px;
+  border-radius: 250px;
   font-size: 25px;
   font-weight: bold;
   background-color: grey;
