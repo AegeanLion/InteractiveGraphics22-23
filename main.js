@@ -2,8 +2,9 @@
 
 const objs = [];
 
-function setup() {
-  createCanvas(500, 500);
+let sketch = function(p) {
+  p.setup = function() {
+    createCanvas(500, 500);
 
 // initializing all pieces of barrel
  barrelBase1 = new barrelBase(0, 0, 0, 60/2, 50/2, 60/2);
@@ -31,10 +32,10 @@ function setup() {
 //     console.log(objs[i]);
 //   }
 
-}
-
-function draw() {
-  // moving center points, setting angle mode etc
+  }
+  
+  p.draw = function() {
+      // moving center points, setting angle mode etc
   angleMode(DEGREES);
   background(220);
   translate(250, 250);
@@ -69,6 +70,9 @@ function mouseDragged() {
     rotateX3D(objs[i], pmouseY - mouseY);
     rotateY3D(objs[i], pmouseX - mouseX);
   }
+  }
 }
+
+new p5(sketch, "box1"); 
 
 
