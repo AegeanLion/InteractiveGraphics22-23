@@ -42,20 +42,37 @@
   padding: 14px 25px;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 1000px;
   font-size: 25px;
   font-weight: bold;
   background-color: grey;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%
+  margin-top: 15%
 }
 
 body {
    animation: colorFlow 10s;
    animation-iteration-count: infinite;
    -webkit-animation: colorFlow 10s infinite alternate; 
+}
+
+a:link, a:visited {
+  background-color: #5673d6;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover, a:active {
+  background-color: #7289DA;
 }
 
 @keyframes colorFlow {
