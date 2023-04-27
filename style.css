@@ -51,9 +51,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 15%;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+}
+
+body {
+   animation: colorFlow 10s;
+   animation-iteration-count: infinite;
+   -webkit-animation: colorFlow 10s infinite alternate; 
+  
 }
 
 a:link, a:visited {
@@ -66,25 +70,19 @@ a:link, a:visited {
   font-size: 25px;
   font-weight: bold;
   text-decoration: underline;
-  animation: idle 10s;
+}
+
+a:hover, a:active {
+   animation: colorFlow 10s;
   animation-iteration-count: infinite;
-  -webkit-animation: idle 10s infinite alternate;
+  -webkit-animation: colorFlow 10s infinite alternate;
 }
 
-@keyframes idle {
-  0% {background: lightgrey;}
-  25% {background: darkgrey;}
-  50% {background: lightgrey;}
-  75% {background: darkgrey;}
-  100% {background: lightgrey;}
-  125% {background: darkgrey;}
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9076ff, 0 0 40px #9076ff, 0 0 50px #9076ff, 0 0 60px #9076ff, 0 0 70px #9076ff;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #9076ff, 0 0 70px #00FFFF, 0 0 80px #00FFFF;
-  }
+@keyframes colorFlow {
+      0%   {background: blue;}
+      25%  {background: aqua;}
+      50%  {background: blue;}
+      75%  {background: aqua;}
+      100% {background: blue;}
+      125%  {background: aqua;}
 }
