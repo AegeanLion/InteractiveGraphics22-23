@@ -71,21 +71,6 @@ a:link, a:visited {
   -webkit-animation: idle 10s infinite alternate;
 }
 
-a:hover, a:active {
-   animation: colorFlow 10s;
-  animation-iteration-count: infinite;
-  -webkit-animation: colorFlow 10s infinite alternate;
-}
-
-@keyframes colorFlow {
-      0%   {background: blue;}
-      25%  {background: aqua;}
-      50%  {background: blue;}
-      75%  {background: aqua;}
-      100% {background: blue;}
-      125%  {background: aqua;}
-}
-
 @keyframes idle {
   0% {background: lightgrey;}
   25% {background: darkgrey;}
