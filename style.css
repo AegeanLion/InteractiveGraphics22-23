@@ -56,13 +56,6 @@
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-body {
-   animation: colorFlow 10s;
-   animation-iteration-count: infinite;
-   -webkit-animation: colorFlow 10s infinite alternate; 
-  
-}
-
 a:link, a:visited {
   color: white;
   padding: 14px 25px;
